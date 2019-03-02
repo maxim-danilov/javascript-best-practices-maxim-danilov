@@ -25,20 +25,20 @@ moment.utc(utcDateString);
 // get a JS Date by a UTC date (string)
 moment.utc(utcDateString).toDate();
 
-// check is valid ISO 8601 date (string)
+// check is a valid ISO 8601 date (string)
 const isValidDate = moment(utcDateString, moment.ISO_8601).isValid();
 
 /*
- * convert a UTC date (string) to Moment with changed timeozne
- * 1) get JS Date by UTC date (string)
- * 2) change timezone to 'America/Los_Angeles'
+ * convert a UTC date (string) to a Moment with changed timeozne
+ * 1) get a JS Date by a UTC date (string)
+ * 2) change the timezone to 'America/Los_Angeles'
  */
 moment.utc(utcDateString).tz('America/Los_Angeles');
 
 /*
- * convert a timezone date (string) to Moment (with a timezone offset)
- * 1) get Moment by a date (string) and a timezone
- * 2) get Moment UTC mode
+ * convert a timezone date (string) to a Moment (with a timezone offset)
+ * 1) get a Moment by a date (string) and a timezone
+ * 2) get a Moment (UTC mode)
  */
 const losAngelesDate = 'March 2nd 2019, 5:27:40 am';
 moment.tz(losAngelesDate, 'MMMM Do YYYY, h:mm:ss a', 'America/Los_Angeles').utc();
