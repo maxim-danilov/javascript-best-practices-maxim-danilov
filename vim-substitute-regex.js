@@ -1,5 +1,6 @@
 /**
  * Vim provides the :s (substitute) command for search and replace
+ * +, ?, |, &, {, (, and ) must be escaped to use their special function.
  */
 
 /**
