@@ -6,6 +6,7 @@ const api = {
   },
 };
 
+
 // stub console.log
 const consoleLogStub = sinon.stub(console, 'log');
 const testMessage = 'a test message';
@@ -16,6 +17,19 @@ api.printMessage(testMessage);
 // check the api calls console.log properly
 consoleLogStub.called; // true
 consoleLogStub.withArgs(testMessage).calledOnce; // true
+
+// get the call info
+consoleLogStub.getCall(0);
+/*
+{
+  "args": [ "a test message" ],
+  "lastArg": "a test message",
+  "callId": 0,
+  "exception:" undefined,
+  "returnValue:" undefined,
+  "callback:" undefined,
+}
+ */
 
 // restore console.log
 consoleLogStub.restore();
